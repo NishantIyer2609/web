@@ -1,0 +1,1516 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lubera - E-Health Systems Breakthrough</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', sans-serif;
+            line-height: 1.6;
+            color: #1a1a1a;
+            background: #ffffff;
+        }
+
+        /* Tab Navigation */
+        .tab-nav {
+            display: flex;
+            gap: 0;
+            background: #ffffff;
+            border-bottom: 2px solid #e5e5e5;
+            position: sticky;
+            top: 0;
+            z-index: 101;
+            padding: 0 60px;
+        }
+
+        .tab-btn {
+            padding: 16px 24px;
+            background: none;
+            border: none;
+            font-size: 15px;
+            font-weight: 600;
+            color: #666;
+            cursor: pointer;
+            transition: all 0.3s;
+            border-bottom: 3px solid transparent;
+            margin-bottom: -2px;
+        }
+
+        .tab-btn.active {
+            color: #0066cc;
+            border-bottom-color: #0066cc;
+        }
+
+        .tab-btn:hover {
+            color: #0066cc;
+        }
+
+        .tab-content {
+            display: none;
+        }
+
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        /* Main Navigation */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 20px 60px;
+            background: #ffffff;
+            border-bottom: 1px solid #e5e5e5;
+            position: relative;
+            z-index: 100;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 700;
+            color: #0066cc;
+            letter-spacing: -0.5px;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 40px;
+            list-style: none;
+        }
+
+        nav a {
+            text-decoration: none;
+            color: #333;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
+        }
+
+        nav a:hover {
+            color: #0066cc;
+        }
+
+        .nav-button {
+            background: #0066cc;
+            color: white !important;
+            padding: 10px 24px;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.2s;
+        }
+
+        .nav-button:hover {
+            background: #0052a3 !important;
+        }
+
+        /* Hero Section */
+        .hero {
+            padding: 100px 60px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 56px;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            color: #1a1a1a;
+            font-weight: 700;
+        }
+
+        .hero-subtitle {
+            font-size: 20px;
+            color: #666;
+            margin-bottom: 40px;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .hero-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+            margin: 60px 0;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .stat-box {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+        }
+
+        .stat-number {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .stat-label {
+            font-size: 14px;
+            color: #666;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            margin-top: 40px;
+        }
+
+        .btn {
+            padding: 14px 32px;
+            border-radius: 6px;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            font-weight: 600;
+            transition: all 0.3s;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #0066cc;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #0052a3;
+            transform: translateY(-2px);
+            box-shadow: 0 8px 24px rgba(0, 102, 204, 0.2);
+        }
+
+        .btn-secondary {
+            background: white;
+            color: #0066cc;
+            border: 2px solid #0066cc;
+        }
+
+        .btn-secondary:hover {
+            background: #f5f7ff;
+            transform: translateY(-2px);
+        }
+
+        /* Problem Section */
+        .section {
+            padding: 80px 60px;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            font-size: 40px;
+            font-weight: 700;
+            margin-bottom: 50px;
+            text-align: center;
+            color: #1a1a1a;
+        }
+
+        .problem-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-bottom: 60px;
+        }
+
+        .problem-card {
+            background: #fff5f5;
+            padding: 40px;
+            border-radius: 8px;
+            border-left: 4px solid #cc0000;
+        }
+
+        .problem-card h3 {
+            font-size: 20px;
+            margin-bottom: 15px;
+            color: #cc0000;
+        }
+
+        .problem-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        /* Solution Section */
+        .solution {
+            background: #f0f4ff;
+        }
+
+        .solution-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .solution-card {
+            background: white;
+            padding: 40px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            margin-bottom: 20px;
+        }
+
+        .solution-card h4 {
+            font-size: 18px;
+            margin-bottom: 15px;
+            color: #0066cc;
+        }
+
+        .solution-card p {
+            color: #666;
+            font-size: 15px;
+            line-height: 1.8;
+        }
+
+        .feature-icon {
+            font-size: 32px;
+            margin-bottom: 15px;
+        }
+
+        /* Architecture Section */
+        .architecture {
+            background: white;
+        }
+
+        .arch-highlight {
+            background: #fffef0;
+            border-left: 4px solid #ff9800;
+            padding: 30px;
+            margin: 40px 0;
+            border-radius: 4px;
+        }
+
+        .arch-highlight strong {
+            color: #ff9800;
+        }
+
+        .comparison-section {
+            margin: 60px 0;
+        }
+
+        .comparison-text {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin: 30px 0;
+        }
+
+        .comparison-text div {
+            padding: 20px;
+            background: #f9f9f9;
+            border-radius: 6px;
+        }
+
+        .comparison-text h4 {
+            color: #0066cc;
+            margin-bottom: 15px;
+            font-size: 16px;
+        }
+
+        .comparison-text ul {
+            margin-left: 20px;
+            color: #666;
+        }
+
+        .comparison-text li {
+            margin-bottom: 10px;
+            font-size: 14px;
+        }
+
+        /* Market Section */
+        .market {
+            background: #f5f7ff;
+        }
+
+        .market-stats {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+            margin: 50px 0;
+        }
+
+        .market-stat {
+            text-align: center;
+        }
+
+        .market-stat h3 {
+            font-size: 36px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .market-stat p {
+            color: #666;
+            font-size: 15px;
+        }
+
+        /* Technical Specs */
+        .specs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin: 40px 0;
+        }
+
+        .spec-card {
+            background: white;
+            padding: 30px;
+            border-radius: 8px;
+            border: 1px solid #e5e5e5;
+            text-align: center;
+        }
+
+        .spec-card .metric {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 10px;
+        }
+
+        .spec-card .label {
+            font-size: 14px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        /* Roadmap Section */
+        .roadmap {
+            background: white;
+        }
+
+        .roadmap-timeline {
+            position: relative;
+            padding: 40px 0;
+        }
+
+        .roadmap-item {
+            padding: 30px;
+            margin: 20px 0;
+            background: #f9f9f9;
+            border-left: 4px solid #0066cc;
+            border-radius: 4px;
+        }
+
+        .roadmap-item h4 {
+            color: #0066cc;
+            margin-bottom: 10px;
+            font-size: 16px;
+        }
+
+        .roadmap-item p {
+            color: #666;
+            font-size: 14px;
+        }
+
+        /* Team Section */
+        .team {
+            background: #f5f7ff;
+        }
+
+        .team-content {
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .team-content h3 {
+            font-size: 20px;
+            color: #0066cc;
+            margin: 20px 0;
+        }
+
+        .team-content p {
+            color: #666;
+            line-height: 1.8;
+            font-size: 15px;
+        }
+
+        /* CTA Section */
+        .final-cta {
+            background: linear-gradient(135deg, #0066cc 0%, #0052a3 100%);
+            color: white;
+            padding: 80px 60px;
+            text-align: center;
+        }
+
+        .final-cta h2 {
+            font-size: 40px;
+            margin-bottom: 20px;
+            font-weight: 700;
+        }
+
+        .final-cta p {
+            font-size: 18px;
+            margin-bottom: 40px;
+            opacity: 0.95;
+        }
+
+        .cta-form {
+            display: flex;
+            gap: 10px;
+            max-width: 500px;
+            margin: 0 auto;
+        }
+
+        .cta-form input {
+            flex: 1;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 6px;
+            font-size: 15px;
+        }
+
+        .cta-form input::placeholder {
+            color: #999;
+        }
+
+        .cta-form button {
+            padding: 12px 30px;
+            background: white;
+            color: #0066cc;
+            border: none;
+            border-radius: 6px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s;
+        }
+
+        .cta-form button:hover {
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: #1a1a1a;
+            color: white;
+            padding: 40px 60px;
+            text-align: center;
+            font-size: 14px;
+        }
+
+        footer a {
+            color: #0066cc;
+            text-decoration: none;
+        }
+
+        footer a:hover {
+            text-decoration: underline;
+        }
+
+        /* Hero Animated Section */
+        .hero-animated {
+            padding: 120px 60px;
+            background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 50%, #f0f4ff 100%);
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .hero-text-container {
+            text-align: left;
+        }
+
+        .hero-title {
+            font-size: 52px;
+            font-weight: 700;
+            line-height: 1.3;
+            color: #1a1a1a;
+            margin-bottom: 24px;
+            letter-spacing: -0.5px;
+        }
+
+        .hero-context {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            max-width: 600px;
+            margin: 0;
+        }
+
+        .hero-graphic {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 400px;
+        }
+
+        .animated-medical-icon {
+            position: relative;
+            width: 200px;
+            height: 200px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .pulse-ring {
+            position: absolute;
+            width: 200px;
+            height: 200px;
+            border: 2px solid #0066cc;
+            border-radius: 50%;
+            animation: pulse-animation 2s infinite;
+            opacity: 0.3;
+        }
+
+        @keyframes pulse-animation {
+            0% { transform: scale(0.8); opacity: 0.8; }
+            50% { opacity: 0.4; }
+            100% { transform: scale(1.2); opacity: 0; }
+        }
+
+        /* Challenges Section */
+        .challenges-section {
+            background: #ffffff;
+            padding: 100px 60px !important;
+        }
+
+        .section-subtitle {
+            font-size: 18px;
+            color: #666;
+            text-align: center;
+            max-width: 800px;
+            margin: 0 auto 60px;
+            line-height: 1.7;
+        }
+
+        .challenges-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .challenge-item {
+            background: #ffffff;
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+        }
+
+        .challenge-item:hover {
+            box-shadow: 0 8px 24px rgba(0,0,0,0.08);
+            border-color: #0066cc;
+        }
+
+        .challenge-header {
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
+            padding: 24px;
+            border-bottom: 1px solid #e5e5e5;
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+        }
+
+        .challenge-icon {
+            font-size: 32px;
+            flex-shrink: 0;
+        }
+
+        .challenge-header h3 {
+            margin: 0;
+            font-size: 18px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .challenge-content {
+            padding: 24px;
+        }
+
+        .challenge-stats {
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        .stat-highlight {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0066cc;
+            margin-bottom: 8px;
+        }
+
+        .stat-label {
+            font-size: 13px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 0;
+        }
+
+        .challenge-details {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .challenge-details li {
+            font-size: 14px;
+            line-height: 1.8;
+            color: #555;
+            margin-bottom: 12px;
+            padding-left: 0;
+        }
+
+        .challenge-details li:last-child {
+            margin-bottom: 0;
+        }
+
+        .challenge-details strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .problem-statement {
+            background: linear-gradient(135deg, #fffef0 0%, #fff9e6 100%);
+            border-left: 4px solid #ff9800;
+            padding: 32px;
+            border-radius: 8px;
+            text-align: center;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .problem-statement p {
+            font-size: 16px;
+            line-height: 1.8;
+            color: #555;
+            margin: 0;
+        }
+
+        .problem-statement strong {
+            color: #ff9800;
+            font-weight: 600;
+        }
+
+        /* Solution Showcase */
+        .solution-showcase {
+            background: #ffffff;
+            padding: 100px 60px !important;
+        }
+
+        .system-overview {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 80px;
+            align-items: center;
+        }
+
+        .overview-card {
+            background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 40px;
+            transition: all 0.3s ease;
+        }
+
+        .overview-card:hover {
+            box-shadow: 0 8px 32px rgba(0,102,204,0.12);
+            border-color: #0066cc;
+        }
+
+        .overview-header {
+            display: flex;
+            gap: 16px;
+            align-items: flex-start;
+            margin-bottom: 24px;
+        }
+
+        .icon-large {
+            font-size: 40px;
+            flex-shrink: 0;
+        }
+
+        .overview-header h3 {
+            margin: 0;
+            font-size: 22px;
+            font-weight: 600;
+            color: #1a1a1a;
+        }
+
+        .overview-body {
+            margin-top: 20px;
+        }
+
+        .overview-text {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #666;
+            margin-bottom: 24px;
+        }
+
+        .component-list {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 12px;
+        }
+
+        .component {
+            background: white;
+            border: 1px solid #e5e5e5;
+            border-radius: 8px;
+            padding: 12px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 14px;
+            color: #555;
+            transition: all 0.2s ease;
+        }
+
+        .component:hover {
+            border-color: #0066cc;
+            background: #f5f7ff;
+        }
+
+        .comp-icon {
+            font-size: 20px;
+        }
+
+        .comp-name {
+            font-weight: 500;
+        }
+
+        .comparison-card {
+            background: linear-gradient(135deg, #f0f4ff 0%, #f5f7ff 100%);
+            border: 2px solid #0066cc;
+            border-radius: 12px;
+            padding: 40px;
+        }
+
+        .comp-row {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 24px;
+            align-items: center;
+        }
+
+        .comp-cell {
+            text-align: center;
+        }
+
+        .comp-cell h4 {
+            margin: 0 0 12px 0;
+            font-size: 16px;
+            color: #666;
+            font-weight: 500;
+        }
+
+        .comp-price {
+            font-size: 24px;
+            font-weight: 700;
+            color: #cc0000;
+            margin: 0 0 8px 0;
+        }
+
+        .comp-price-highlight {
+            font-size: 32px;
+            font-weight: 700;
+            color: #0066cc;
+            margin: 0 0 12px 0;
+        }
+
+        .comp-note {
+            font-size: 13px;
+            color: #999;
+            line-height: 1.6;
+            margin: 0;
+        }
+
+        .comp-divider {
+            width: 2px;
+            height: 100px;
+            background: linear-gradient(180deg, transparent 0%, #ddd 50%, transparent 100%);
+        }
+
+        /* Metrics Section */
+        .metrics-section {
+            margin-top: 80px;
+        }
+
+        .metrics-title {
+            font-size: 28px;
+            font-weight: 700;
+            color: #1a1a1a;
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .metrics-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 24px;
+            margin-bottom: 60px;
+        }
+
+        .metric-card {
+            background: linear-gradient(135deg, #ffffff 0%, #f9f9f9 100%);
+            border: 1px solid #e5e5e5;
+            border-radius: 12px;
+            padding: 32px;
+            text-align: center;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .metric-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 4px;
+            background: linear-gradient(90deg, #0066cc 0%, #0052a3 100%);
+        }
+
+        .metric-card:hover {
+            box-shadow: 0 8px 24px rgba(0,102,204,0.12);
+            border-color: #0066cc;
+        }
+
+        .metric-icon {
+            font-size: 40px;
+            margin-bottom: 16px;
+            display: block;
+        }
+
+        .metric-card h4 {
+            margin: 0 0 24px 0;
+            font-size: 18px;
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        .metric-detail {
+            text-align: center;
+        }
+
+        .metric-label {
+            font-size: 13px;
+            color: #999;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            margin: 8px 0;
+        }
+
+        .metric-value {
+            font-size: 18px;
+            font-weight: 600;
+            color: #0066cc;
+            margin: 12px 0;
+        }
+
+        .metric-value-large {
+            font-size: 28px;
+            font-weight: 700;
+            color: #0066cc;
+            margin: 12px 0;
+        }
+
+        .metric-stat {
+            font-size: 14px;
+            color: #555;
+            margin: 8px 0;
+            font-weight: 500;
+        }
+
+        .metric-note {
+            font-size: 13px;
+            color: #999;
+            margin-top: 12px;
+        }
+
+        .metric-improvement {
+            font-size: 14px;
+            color: #0066cc;
+            font-weight: 600;
+            margin-top: 12px;
+            padding-top: 12px;
+            border-top: 1px solid #f0f0f0;
+        }
+
+        /* Key Differentiator */
+        .key-differentiator {
+            background: linear-gradient(135deg, #f5f7ff 0%, #f0f4ff 100%);
+            border: 1px solid #d4e3ff;
+            border-left: 4px solid #0066cc;
+            border-radius: 12px;
+            padding: 48px;
+            margin-top: 60px;
+        }
+
+        .differentiator-content h3 {
+            font-size: 24px;
+            font-weight: 700;
+            color: #1a1a1a;
+            margin: 0 0 16px 0;
+        }
+
+        .differentiator-content > p {
+            font-size: 16px;
+            color: #0066cc;
+            font-weight: 600;
+            margin: 0 0 24px 0;
+        }
+
+        .differentiator-points {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: grid;
+            gap: 16px;
+        }
+
+        .differentiator-points li {
+            font-size: 15px;
+            line-height: 1.7;
+            color: #555;
+            padding-left: 0;
+            display: flex;
+            gap: 12px;
+        }
+
+        .differentiator-points li::before {
+            content: '✓';
+            color: #0066cc;
+            font-weight: 700;
+            flex-shrink: 0;
+        }
+
+        .differentiator-points strong {
+            color: #1a1a1a;
+            font-weight: 600;
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .hero-content {
+                grid-template-columns: 1fr;
+                gap: 40px;
+            }
+
+            .hero-graphic {
+                height: 300px;
+            }
+
+            .system-overview {
+                grid-template-columns: 1fr;
+            }
+
+            .comp-row {
+                grid-template-columns: 1fr;
+            }
+
+            .comp-divider {
+                width: 100%;
+                height: 2px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            nav {
+                padding: 15px 30px;
+                flex-direction: column;
+                gap: 20px;
+            }
+            nav ul {
+                gap: 20px;
+                flex-wrap: wrap;
+                justify-content: center;
+                display: none;
+            }
+            
+            .hero-animated {
+                padding: 60px 30px;
+            }
+
+            .hero-title {
+                font-size: 36px;
+            }
+
+            .challenges-section,
+            .solution-showcase {
+                padding: 60px 30px !important;
+            }
+
+            .challenges-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .metrics-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .section {
+                padding: 60px 30px;
+            }
+
+            .solution-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .market-stats {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .cta-form {
+                flex-direction: column;
+            }
+
+            .key-differentiator {
+                padding: 32px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Main Navigation -->
+    <nav>
+        <div class="logo">LUBERA</div>
+        <div style="flex: 1;"></div>
+        <ul>
+            <li><a href="#overview">Overview</a></li>
+            <li><a href="#poc">POC</a></li>
+            <li><a href="#connect" class="nav-button">Get in Touch</a></li>
+        </ul>
+    </nav>
+
+    <!-- Tab Navigation -->
+    <div class="tab-nav">
+        <button class="tab-btn active" onclick="switchTab('landing')">Landing Page</button>
+        <button class="tab-btn" onclick="switchTab('poc')">Proof of Concept</button>
+    </div>
+
+    <!-- TAB 1: LANDING PAGE -->
+    <div id="landing" class="tab-content active">
+        <!-- Hero Section - Animated Minimal Landing -->
+        <section class="hero-animated">
+            <div class="hero-content">
+                <div class="hero-text-container">
+                    <h1 class="hero-title">Engineering Breakthroughs in E-Health Systems Adoption</h1>
+                    <p class="hero-context">In 2025, e-health systems and EMRs are life-saving engines—giving doctors instant data, catching errors before they happen, and connecting every part of care in real time. Computers in the clinic aren't convenience tools anymore; they're the frontline tech that prevents mistakes, speeds up treatment, and saves lives every day.</p>
+                </div>
+                <div class="hero-graphic">
+                    <div class="animated-medical-icon">
+                        <div class="pulse-ring"></div>
+                        <svg viewBox="0 0 100 100" width="80" height="80">
+                            <circle cx="50" cy="50" r="40" fill="none" stroke="#0066cc" stroke-width="2" opacity="0.3"/>
+                            <path d="M 20 50 Q 35 35 50 50 T 80 50" stroke="#0066cc" stroke-width="2" fill="none" stroke-linecap="round"/>
+                            <circle cx="50" cy="50" r="8" fill="#0066cc"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Challenges Section -->
+        <section class="section challenges-section">
+            <h2 class="section-title">The Reality for Under-Resourced Clinics in South Asia & Africa</h2>
+            <p class="section-subtitle">Resource-constrained healthcare facilities face systematic barriers that compound every day:</p>
+            
+            <div class="challenges-grid">
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <span class="challenge-icon">💰</span>
+                        <h3>Cost Barrier</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <div class="challenge-stats">
+                            <div class="stat-highlight">₹15,000–20,000</div>
+                            <p class="stat-label">Minimum hardware requirement in industry</p>
+                        </div>
+                        <ul class="challenge-details">
+                            <li><strong>EMR software:</strong> ₹1,000/month additional cost</li>
+                            <li><strong>Total entry cost:</strong> Never gone below this in industry</li>
+                            <li><strong>Clinic sweet spot:</strong> ₹5,000 hardware—they wouldn't hesitate</li>
+                            <li><strong>Reality:</strong> Today's technology makes this impossible</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <span class="challenge-icon">📡</span>
+                        <h3>Network Connectivity</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <div class="challenge-stats">
+                            <div class="stat-highlight">Unstable</div>
+                            <p class="stat-label">Even in "connected" regions</p>
+                        </div>
+                        <ul class="challenge-details">
+                            <li><strong>Industry standard:</strong> Hundreds of kbps to mbps required</li>
+                            <li><strong>Reality:</strong> Stable connectivity is a luxury</li>
+                            <li><strong>Consequence:</strong> Incomplete records, missed diagnoses</li>
+                            <li><strong>Impact:</strong> System downtime when clinics need it most</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <span class="challenge-icon">🔋</span>
+                        <h3>Power Constraints</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <div class="challenge-stats">
+                            <div class="stat-highlight">Constant Outages</div>
+                            <p class="stat-label">Power infrastructure remains unreliable</p>
+                        </div>
+                        <ul class="challenge-details">
+                            <li><strong>Current solutions:</strong> High power draw standard</li>
+                            <li><strong>Battery drain:</strong> Rapid depletion with standard systems</li>
+                            <li><strong>Backup costs:</strong> Prohibitively expensive for clinics</li>
+                            <li><strong>Margin impact:</strong> Power overhead is luxury they can't afford</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="challenge-item">
+                    <div class="challenge-header">
+                        <span class="challenge-icon">⚙️</span>
+                        <h3>Technical Complexity</h3>
+                    </div>
+                    <div class="challenge-content">
+                        <div class="challenge-stats">
+                            <div class="stat-highlight">2–4 Weeks</div>
+                            <p class="stat-label">Typical deployment time</p>
+                        </div>
+                        <ul class="challenge-details">
+                            <li><strong>Setup barrier:</strong> Requires expert-level knowledge</li>
+                            <li><strong>Deployment:</strong> Complex, time-consuming process</li>
+                            <li><strong>Result:</strong> Weeks of downtime, wasted budgets</li>
+                            <li><strong>Outcome:</strong> Staff frustration, systems abandoned</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="problem-statement">
+                <p><strong>These barriers have persisted for decades.</strong> Industry approaches—cloud-dependent, bandwidth-heavy, power-hungry—fundamentally cannot solve them. The problem isn't implementation. It's architecture.</p>
+            </div>
+        </section>
+
+        <!-- The Solution: Engineering Breakthroughs -->
+        <section class="section solution-showcase">
+            <h2 class="section-title">The Solution: Engineering Architecture Reimagined</h2>
+            <p class="section-subtitle">Through systemic optimization at the hardware and firmware level, we've achieved what the industry said was impossible.</p>
+
+            <!-- System Overview -->
+            <div class="system-overview">
+                <div class="overview-card">
+                    <div class="overview-header">
+                        <span class="icon-large">📦</span>
+                        <h3>Palm-Sized Compute Node</h3>
+                    </div>
+                    <div class="overview-body">
+                        <p class="overview-text">Complete medical OS with EMR, imaging, communication, and AI capabilities.</p>
+                        <div class="component-list">
+                            <div class="component">
+                                <span class="comp-icon">🖥️</span>
+                                <span class="comp-name">Compute Box</span>
+                            </div>
+                            <div class="component">
+                                <span class="comp-icon">⌨️</span>
+                                <span class="comp-name">Keyboard</span>
+                            </div>
+                            <div class="component">
+                                <span class="comp-icon">🖱️</span>
+                                <span class="comp-name">Mouse</span>
+                            </div>
+                            <div class="component">
+                                <span class="comp-icon">🖨️</span>
+                                <span class="comp-name">Printer</span>
+                            </div>
+                            <div class="component">
+                                <span class="comp-icon">🖥️</span>
+                                <span class="comp-name">Display</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="comparison-card">
+                    <div class="comp-row">
+                        <div class="comp-cell">
+                            <h4>Industry Standard</h4>
+                            <p class="comp-price">₹15,000–20,000+</p>
+                            <p class="comp-note">Minimum entry cost never exceeded</p>
+                        </div>
+                        <div class="comp-divider"></div>
+                        <div class="comp-cell highlight">
+                            <h4>Lubera System</h4>
+                            <p class="comp-price-highlight">₹4,500</p>
+                            <p class="comp-note">Complete solution. Hardware cost-cutting from systems architecture.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Performance Metrics -->
+            <div class="metrics-section">
+                <h3 class="metrics-title">Engineering Specifications</h3>
+                
+                <div class="metrics-grid">
+                    <!-- Metric 1: Hardware -->
+                    <div class="metric-card">
+                        <div class="metric-icon">⚙️</div>
+                        <h4>Hardware Architecture</h4>
+                        <div class="metric-detail">
+                            <p class="metric-label">Proprietary Optimization</p>
+                            <p class="metric-value">Systems-level firmware & hardware design</p>
+                            <p class="metric-note">Engineering breakthroughs at core layers</p>
+                        </div>
+                    </div>
+
+                    <!-- Metric 2: Storage -->
+                    <div class="metric-card">
+                        <div class="metric-icon">💾</div>
+                        <h4>Storage Capacity</h4>
+                        <div class="metric-detail">
+                            <p class="metric-value">2GB Built-in</p>
+                            <p class="metric-label">For complete medical records & imaging</p>
+                            <p class="metric-note">Full patient data + operational assets</p>
+                        </div>
+                    </div>
+
+                    <!-- Metric 3: Connectivity -->
+                    <div class="metric-card">
+                        <div class="metric-icon">📡</div>
+                        <h4>Network Requirements</h4>
+                        <div class="metric-detail">
+                            <p class="metric-value-large">50 kbps</p>
+                            <p class="metric-label">Regular Operations</p>
+                            <p class="metric-stat">Built-in cellular</p>
+                            <p class="metric-improvement">40% bandwidth reduction vs nearest competitor</p>
+                        </div>
+                    </div>
+
+                    <!-- Metric 4: Power -->
+                    <div class="metric-card">
+                        <div class="metric-icon">🔋</div>
+                        <h4>Power Efficiency</h4>
+                        <div class="metric-detail">
+                            <p class="metric-value-large">10mAh Powerbank</p>
+                            <p class="metric-label">Full clinic day (10+ hours)</p>
+                            <p class="metric-stat">Peak usage performance</p>
+                            <p class="metric-improvement">70% lower power consumption vs industry</p>
+                        </div>
+                    </div>
+
+                    <!-- Metric 5: Performance -->
+                    <div class="metric-card">
+                        <div class="metric-icon">⚡</div>
+                        <h4>Performance</h4>
+                        <div class="metric-detail">
+                            <p class="metric-label">Zero Compromise</p>
+                            <p class="metric-value">Same functionality</p>
+                            <p class="metric-value">Same visual fidelity</p>
+                            <p class="metric-note">Radically different economics</p>
+                        </div>
+                    </div>
+
+                    <!-- Metric 6: Deployment -->
+                    <div class="metric-card">
+                        <div class="metric-icon">⏱️</div>
+                        <h4>Deployment Time</h4>
+                        <div class="metric-detail">
+                            <p class="metric-value-large">&lt;2 Hours</p>
+                            <p class="metric-label">From box to clinic operation</p>
+                            <p class="metric-note">vs 2–4 weeks industry standard</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Key Differentiator -->
+            <div class="key-differentiator">
+                <div class="differentiator-content">
+                    <h3>The Architectural Shift</h3>
+                    <p>This isn't cost-cutting on features. This is engineering fundamentally different.</p>
+                    <ul class="differentiator-points">
+                        <li><strong>Hardware optimization:</strong> Firmware-level engineering, not compromised specifications</li>
+                        <li><strong>Local-first design:</strong> Zero cloud dependency, zero continuous connectivity requirement</li>
+                        <li><strong>Power-efficient architecture:</strong> Systematic optimization across all layers</li>
+                        <li><strong>Clinical completeness:</strong> Full EMR, imaging, communication—nothing missing</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <!-- CTA Section -->
+        <section class="final-cta" id="connect">
+            <h2>Let's Build the Future of Rural Healthcare</h2>
+            <p>We're actively developing field deployments, regulatory pathways, and institutional partnerships.</p>
+            <p style="font-size: 14px; opacity: 0.8;">If you're an incubator, professor, or investor interested in this breakthrough approach, we'd like to connect.</p>
+            <div class="cta-form">
+                <input type="email" placeholder="your@email.com">
+                <button onclick="alert('Thank you for your interest. We will be in touch.')">Get in Touch</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- TAB 2: PROOF OF CONCEPT -->
+    <div id="poc" class="tab-content">
+        <section class="section">
+            <h2 class="section-title">Proof of Concept</h2>
+            
+            <div class="arch-highlight">
+                <strong>Status:</strong> We've built and validated a complete proof of concept demonstrating the architectural approach. This POC runs a full medical EMR with all required clinical workflows.
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Clinical Capabilities</h3>
+            <div class="specs-grid">
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Patient Registration & Records</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Appointment Scheduling</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Consultation Notes</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Diagnosis Entry</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Prescription Management</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Imaging Integration</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Network Communication</div>
+                </div>
+                <div class="spec-card">
+                    <div class="metric">✓</div>
+                    <div class="label">Offline Functionality</div>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Technical Implementation</h3>
+            <div class="comparison-text">
+                <div>
+                    <h4>Performance Metrics</h4>
+                    <ul>
+                        <li>Load time: &lt;2 seconds</li>
+                        <li>Database queries: &lt;100ms avg</li>
+                        <li>Memory usage: &lt;150MB</li>
+                        <li>Concurrent users: 1-2 (clinic scale)</li>
+                        <li>Uptime: 99.5%+ verified</li>
+                    </ul>
+                </div>
+                <div>
+                    <h4>Resource Efficiency</h4>
+                    <ul>
+                        <li>Storage: &lt;2GB for 10k records</li>
+                        <li>Sync data: &lt;100KB per sync</li>
+                        <li>Battery life: 8+ hours per charge</li>
+                        <li>Thermal: Passive cooling sufficient</li>
+                        <li>Reliability: Zero data loss events</li>
+                    </ul>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 40px; margin-bottom: 20px;">Workflow Validation</h3>
+            <div class="roadmap-timeline">
+                <div class="roadmap-item">
+                    <h4>Typical Clinic Session</h4>
+                    <p>Patient registration → appointment scheduling → consultation notes → diagnosis entry → prescription generation → offline record sync. Average session time: 8-12 minutes per patient.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>Network Failure Scenario</h4>
+                    <p>System continues full operation when connectivity lost. All data stored locally. Automatic sync on connection restoration. No user-facing degradation.</p>
+                </div>
+                <div class="roadmap-item">
+                    <h4>Power Efficiency Test</h4>
+                    <p>Full 8-hour clinic day on single charge. Tested on standard mobile powerbanks. Solar-charged powerbank compatible for extended deployments.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="final-cta" id="connect-poc">
+            <h2>Ready to Deploy?</h2>
+            <p>We're moving from proof of concept to field deployments in partnership with rural health organizations.</p>
+            <div class="cta-form">
+                <input type="email" placeholder="your@email.com">
+                <button onclick="alert('Thank you. We will reach out to discuss deployment timelines.')">Start Conversation</button>
+            </div>
+        </section>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Lubera. Breakthrough medical computing for resource-constrained clinics.</p>
+        <p style="margin-top: 10px;"><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
+    </footer>
+
+    <script>
+        function switchTab(tabName) {
+            // Hide all tabs
+            const tabs = document.querySelectorAll('.tab-content');
+            tabs.forEach(tab => tab.classList.remove('active'));
+            
+            // Deactivate all buttons
+            const buttons = document.querySelectorAll('.tab-btn');
+            buttons.forEach(btn => btn.classList.remove('active'));
+            
+            // Show selected tab
+            document.getElementById(tabName).classList.add('active');
+            
+            // Activate corresponding button
+            event.target.classList.add('active');
+            
+            // Scroll to top
+            window.scrollTo(0, 0);
+        }
+    </script>
+</body>
+</html>
