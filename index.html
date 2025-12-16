@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lubera - ABDM-Integrated EMR for Primary Care Clinics</title>
+    <title>Lubera - Digital Healthcare for Tier-2 Clinics</title>
     <style>
         * {
             margin: 0;
@@ -425,243 +425,242 @@
     <!-- Tab Navigation -->
     <div class="tab-nav">
         <button class="tab-btn active" onclick="switchTab('landing')">Platform Overview</button>
-        <button class="tab-btn" onclick="switchTab('poc')">Technical Validation</button>
+        <button class="tab-btn" onclick="switchTab('poc')">Proof of Concept</button>
     </div>
 
     <!-- TAB 1: PLATFORM OVERVIEW -->
     <div id="landing" class="tab-content active">
         <!-- Hero -->
         <section class="hero" id="overview">
-            <h1>ABDM-Integrated EMR Infrastructure for Independent Clinics</h1>
-            <p class="hero-subtitle">Purpose-built electronic medical record system combining low-cost hardware with cloud-native software architecture, designed specifically for ABDM integration in resource-constrained primary care settings across Tier-2 and Tier-3 India.</p>
-            <p style="font-size: 13px; color: #7f8c8d; margin-top: 20px;"><strong>Stage:</strong> Pre-Seed / Technical Validation | <strong>Base:</strong> Hyderabad, India | <strong>Updated:</strong> December 2024</p>
+            <h1>Lubera: The Digital Spine of Tier-2/3 and Rural Healthcare</h1>
+            <p class="hero-subtitle">The fastest, most accessible path to digitization for India's 400,000+ independent clinics. Purpose-built hardware-software ecosystem for ABDM integration in resource-constrained primary care settings.</p>
+            <p style="font-size: 13px; color: #7f8c8d; margin-top: 20px;"><strong>Status:</strong> Pre-Seed / Prototyping | <strong>Location:</strong> Hyderabad, India | <strong>Date:</strong> December 2025</p>
         </section>
 
         <!-- Executive Summary -->
         <section class="section">
-            <h2 class="section-title">Market Context: ABDM Adoption Barriers</h2>
+            <h2 class="section-title">The Problem: India's Healthcare Digital Divide</h2>
 
             <div class="two-column-image-right">
                 <div class="text-block">
-                    <h3>Ayushman Bharat Digital Mission</h3>
-                    <p>Launched in September 2021, ABDM represents India's national digital health infrastructure initiative, establishing standardized protocols for health data exchange through unique ABHA identifiers, centralized registries, and FHIR-compliant interoperability frameworks.</p>
-                    <p><strong>Targeted infrastructure challenges:</strong></p>
+                    <h3>The ABDM Opportunity</h3>
+                    <p>In 2021, the Government of India launched the Ayushman Bharat Digital Mission (ABDM)—a ₹1,600+ crore initiative to create a unified digital health ecosystem. Every Indian citizen gets a unique ABHA ID enabling seamless sharing of health records across hospitals, clinics, labs, and pharmacies nationwide.</p>
+                    <p><strong>Critical challenges it addresses:</strong></p>
                     <ul>
-                        <li>Fragmented health records across disconnected provider systems</li>
-                        <li>Absence of longitudinal patient data during care transitions</li>
-                        <li>Medication reconciliation errors from incomplete histories</li>
-                        <li>Limited cross-institutional data sharing capabilities</li>
-                        <li>Inadequate patient consent management mechanisms</li>
+                        <li>Fragmented patient histories scattered across providers</li>
+                        <li>Inability to access past medical records during emergencies</li>
+                        <li>Prescription errors due to incomplete medication histories</li>
+                        <li>Lack of interoperability between institutions</li>
+                        <li>Patient data privacy and consent management</li>
                     </ul>
                 </div>
                 <div class="image-container">
-                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/29f7b9e7-fa88-4e98-bd5f-09f3e99bb955.png?raw=true" alt="Lubera workstation hardware">
+                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/29f7b9e7-fa88-4e98-bd5f-09f3e99bb955.png?raw=true" alt="Lubera terminal setup">
                 </div>
             </div>
 
             <div class="highlight-box">
-                <strong>Adoption Gap:</strong> While multi-specialty hospitals and corporate healthcare chains have implemented ABDM-compliant EMR systems, independent primary care clinics—which provide approximately 60% of outpatient consultations nationally—face economic and technical barriers to adoption. Existing solutions require capital expenditure of ₹20,000-50,000 plus recurring monthly costs of ₹3,000-5,000, representing unsustainable overhead for clinics with 30-50 daily patient volumes.
+                <strong>The Divide Persists:</strong> Corporate hospitals adopted ABDM-compliant EMR systems. But India's 400,000+ independent clinics—where 60% of primary care happens—remain locked out. The barrier? Economics. Current solutions demand ₹20,000+ upfront + ₹3,000-5,000 monthly. For a clinic seeing 40 patients daily: "I'd need 15 extra patients monthly just to break even."
             </div>
 
-            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Infrastructure Constraints in Target Segment</h3>
-            <p style="color: #555; font-size: 15px; line-height: 1.8; max-width: 900px; margin: 0 auto;">Independent clinics in Tier-2/3 cities operate under infrastructure constraints including intermittent connectivity (2G/3G networks), unreliable power supply, limited IT support availability, and minimal technical training resources. National Health Authority policy documentation identifies cost barriers and technical complexity as primary obstacles to ABDM integration in this segment, with current clinic adoption rates below 5% despite regulatory incentives for digital health record implementation.</p>
+            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Why This Matters</h3>
+            <p style="color: #555; font-size: 15px; line-height: 1.8; max-width: 900px; margin: 0 auto;">Tier-2 and Tier-3 cities face systemic barriers: unreliable internet (no 4G), power constraints, expensive IT support, and limited training resources. The government recognizes this as the primary bottleneck to ABDM's success. Policy papers explicitly cite cost and technical complexity as reasons why clinic adoption remains below 5%—despite mandatory compliance timelines. If this problem didn't exist at scale, NHA wouldn't allocate billions to solve it. The market validation is institutional.</p>
         </section>
 
         <!-- Solution Section -->
         <section class="section">
-            <h2 class="section-title">Technical Architecture & Value Proposition</h2>
+            <h2 class="section-title">The Solution: Lubera Terminal</h2>
 
             <div class="two-column-image-right">
                 <div class="text-block">
-                    <h3>System Design & Specifications</h3>
-                    <p>Lubera implements a hardware-software integrated architecture optimized for deployment in resource-constrained clinical environments, tested through iterative prototyping and validation cycles.</p>
-                    <p><strong>Technical specifications (V4 prototype validated December 2024):</strong></p>
+                    <h3>Technical Innovation, MSPs and Breakthroughs</h3>
+                    <p>Through 3,000+ hours of proprietary hardware engineering, Lubera delivers a clinic-ready terminal that a doctor can literally plug in and start prescribing on the same day—without IT staff or training.</p>
+                    <p> The following claims are grounded in the Lubera V4 prototype, engineered and validated by Cascade Research Group. </p>
                     <ul>
-                        <li><strong>Hardware cost:</strong> ₹10,000 compute unit (50% reduction vs. commercial alternatives)</li>
-                        <li><strong>Software licensing:</strong> ₹1,000/month subscription model based on patient volume</li>
-                        <li><strong>Deployment process:</strong> Plug-and-play configuration requiring monitor and power connection only</li>
-                        <li><strong>Network requirements:</strong> Operational on 2G/3G networks (minimum 20 kbps sustained bandwidth)</li>
-                        <li><strong>Data architecture:</strong> Encrypted cloud storage with local caching, zero on-device PHI retention</li>
-                        <li><strong>Load testing:</strong> Validated for 60+ daily patient consultations under stress conditions</li>
+                        <li><strong>Cheapest Medical Computer Solution:</strong> 10k rupees hardware, one-time investment (vs. industry standard of 20k rupees minimum hardware costs for same functionality). This suddenly appears 50% more affordable for the many under-resourced clinics in India.</li>
+                        <li><strong>Subscription Model:</strong> A simple ₹1,000/month software plan so a 40–50 opd/day clinic pays closer to a mobile bill than a corporate IT contract.</li>
+                        <li><strong>Zero-Friction Deployment:</strong> A courier-delivered box that the receptionist plugs into power and an existing monitor& input-device; within 2 hours the doctor is writing the first e‑prescription on Lubera, with no installers or configuration screens or vendor support.</li>
+                        <li><strong>Engineered for India's Internet Reality:</strong> Flawless operation on 20 kbps (mesh/hotspot/2G/3G networks; competitors crash on congestion</li>
+                        <li><strong>Bank-Grade Security:</strong> Zero patient data on device; enterprise-grade cloud backend on par with HIPAA/HISAR/NPDPA standards.</li>
+                        <li><strong>Industrial Reliability:</strong> Lubera Prototype V3 has been Stress-tested for 60+ patient daily loads across temperature and connectivity extremes</li>
                     </ul>
                 </div>
                 <div class="image-container">
-                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/f8fb8820-1b9e-43ad-a63a-2bf86b966362.png?raw=true" alt="Lubera EMR interface">
+                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/f8fb8820-1b9e-43ad-a63a-2bf86b966362.png?raw=true" alt="Lubera POC client interface">
                 </div>
             </div>
+
+
         </section>
 
         <!-- ABDM Integration -->
         <section class="section">
-            <h2 class="section-title">ABDM Compliance Roadmap</h2>
+            <h2 class="section-title">ABDM Integration Roadmap</h2>
 
-            <p class="section-subtitle">System architecture designed for progressive ABDM milestone integration, with modular compliance layer separating core EMR functionality from national health infrastructure connectivity.</p>
+            <p class="section-subtitle">Lubera is architected ABDM-native from day one, not retrofitted for compliance. We're transitioning to full M1, M2, M3 milestone compliance.</p>
 
             <div class="milestone-grid">
                 <div class="milestone">
                     <h3>M1: Registry Integration</h3>
-                    <p>Health Facility Registry and Healthcare Professional Registry enrollment. Patient ABHA creation via Aadhaar authentication. <strong>Status:</strong> Sandbox testing environment configured; production credentials application submitted December 2024.</p>
+                    <p>Health facility & professional registry integration. Patient ABHA creation via Aadhaar OTP. <strong>Status:</strong> Architecture complete, sandbox application submitted December 2024.</p>
                 </div>
                 <div class="milestone">
-                    <h3>M2: Health Information Provider</h3>
-                    <p>Care context registration and discovery services. FHIR-compliant clinical document generation. Patient record linking to ABHA identifiers. <strong>Timeline:</strong> 8-10 weeks post-M1 certification.</p>
+                    <h3>M2: HIP (Data Provider)</h3>
+                    <p>Patient record linkage. Care context discovery. FHIR-compliant clinical data exposure. <strong>Timeline:</strong> Post-M1 production keys; 8–10 weeks development.</p>
                 </div>
                 <div class="milestone">
-                    <h3>M3: Health Information User</h3>
-                    <p>Consent-based longitudinal record retrieval from external HIPs. FHIR bundle processing and clinical data aggregation. <strong>Timeline:</strong> 10-12 weeks post-M2 certification.</p>
+                    <h3>M3: HIU (Data Consumer)</h3>
+                    <p>Consent-based longitudinal record retrieval. Multi-HIP data aggregation. FHIR bundle ingestion. <strong>Timeline:</strong> Post-M2 production keys; 10–12 weeks development.</p>
                 </div>
             </div>
 
             <div class="image-container" style="margin: 50px 0;">
-                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/architectural-development-timeline.png?raw=true" alt="ABDM integration development timeline">
+                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/architectural-development-timeline.png?raw=true" alt="ABDM architectural timeline">
             </div>
         </section>
 
         <!-- For Doctors -->
         <section class="section">
-            <h2 class="section-title">Clinical Workflow Implementation</h2>
+            <h2 class="section-title">The Experience: Designed for Doctors</h2>
 
-            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Patient Registration & ABDM Linking</h3>
+            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Instant Patient Onboarding via ABDM</h3>
 
             <div class="two-column-image-right">
                 <div class="text-block">
-                    <p>Patient identification occurs through ABHA QR code scanning (from physical card or mobile application), triggering automated retrieval of demographic data and linked health records from ABDM infrastructure. System implements optional biometric authentication (facial recognition) for returning patient identification.</p>
-                    <p style="margin-top: 16px; color: #7f8c8d; font-size: 14px;">Registration workflow completes in under 30 seconds with automatic record linking to national health ID.</p>
+                    <p>Patient arrives. Doctor scans their ABHA QR code (printed card or phone). Within seconds, Lubera pulls complete medical history from the national grid—past diagnoses, medications, allergies, lab results, prescriptions from other cities. The fragmented file system becomes a unified timeline. For returning patients, facial recognition offers one-tap login.</p>
+                    <p style="margin-top: 16px; color: #7f8c8d; font-size: 14px;">Doctor clicks patient and their ABHA-linked medical history auto-loads with full consultation context.</p>
                 </div>
                 <div class="image-container">
-                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/scan-hf-abha2.png?raw=true" alt="ABHA QR code scanning interface">
+                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/scan-hf-abha2.png?raw=true" alt="ABHA QR scan interface">
                 </div>
             </div>
 
             <div class="two-column-image-right">
                 <div class="image-container">
-                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/Screenshot-2025-12-16-193424.png?raw=true" alt="Aggregated patient health records">
+                    <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/Screenshot-2025-12-16-193424.png?raw=true" alt="Patient history after QR scan">
                 </div>
                 <div class="text-block">
-                    <h3>Consultation & Prescription Generation</h3>
-                    <p>Interface design prioritizes rapid data entry through specialty-specific templates mapping common diagnoses to evidence-based treatment protocols. Prescription workflow includes automated drug interaction checking and dosage validation against formulary standards.</p>
-                    <p>Generated prescriptions transmit electronically via WhatsApp messaging or wireless printing, supporting both digital and physical delivery formats based on patient preferences.</p>
-                    <p style="margin-top: 16px; color: #7f8c8d; font-size: 14px;"><em>Note: Interface screenshots demonstrate prototype functionality. ABDM M2/M3 integration pending production certification.</em></p>
+                    <h3>The "3-Click" Prescription</h3>
+                    <p>Interface obsessively optimized for speed. Common diagnoses and medications intelligently mapped by specialty. Standard prescription: Select diagnosis → Pick medications → Generate. Total time: under 30 seconds.</p>
+                    <p>System watches quietly in the background, flagging drug interactions and dosage risks before prescription finalizes. One click sends digitally signed e-prescription to patient's WhatsApp. Or print wirelessly. Choice adapts to patient preference without friction.</p>
+                    <p> The beside image is from Bahmini EMR with successful integration with ABDM. Note: Lubera is still in early planning stage for abdm integration.
+                    <p> Nonetheless, the below UI shows our prototype interface where we operated similar functionalities with health-standards-formatted patient data.
                 </div>
             </div>
 
             <div class="image-container" style="margin: 40px 0;">
-                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602441107.png?raw=true" alt="Clinical prescription interface">
+                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602441107.png?raw=true" alt="Prescription generation interface">
             </div>
 
-            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Integrated Practice Management Features</h3>
+            <h3 style="margin: 40px 0 20px; font-size: 20px; color: #2c3e50;">Complete Clinical Toolkit</h3>
 
             <div class="features-grid">
                 <div class="feature-card">
                     <h4>Appointment Scheduling</h4>
-                    <p>Calendar management with automated SMS reminder delivery and no-show tracking analytics.</p>
+                    <p>Automated SMS reminders. Calendar sync. Patient no-show reduction.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Inventory Tracking</h4>
-                    <p>Stock-level monitoring for common medications with automated reorder threshold alerts.</p>
+                    <h4>Inventory Management</h4>
+                    <p>Track common medications. Auto-alerts for stock depletion.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Financial Management</h4>
-                    <p>GST-compliant invoicing, insurance claim integration, and revenue analytics reporting.</p>
+                    <h4>Billing & GST</h4>
+                    <p>GST-compliant invoicing. Insurance integration. Payment tracking.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Specialty Templates</h4>
-                    <p>Customizable clinical workflows for primary care, pediatrics, orthopedics, and general medicine.</p>
+                    <h4>Custom Templates</h4>
+                    <p>Specialty-specific workflows. Pediatrics, orthopedics, cardiology templates.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Clinical Documentation</h4>
-                    <p>Voice-to-text transcription supporting regional languages for efficient note capture.</p>
+                    <h4>Voice-to-Text Notes</h4>
+                    <p>Regional language support. Clinical note dictation. No manual typing.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Laboratory Integration</h4>
-                    <p>Direct import of diagnostic results into patient records with longitudinal trending.</p>
+                    <h4>Lab Integration</h4>
+                    <p>Result uploads directly into patient charts. Trending and alerts.</p>
                 </div>
             </div>
         </section>
 
         <!-- Business Model -->
         <section class="section">
-            <h2 class="section-title">Commercial Model & Market Opportunity</h2>
+            <h2 class="section-title">Business Model & Economics</h2>
 
             <div class="two-column-image-right">
                 <div class="text-block">
-                    <h3>Pricing Structure</h3>
-                    <p>Hardware component (compute unit, cables, peripherals) sold at ₹10,000 one-time cost, including 12-month warranty coverage and software license activation.</p>
-                    <h3 style="margin-top: 32px;">Subscription Licensing</h3>
-                    <p>Volume-based monthly subscription starting at ₹1,000 for clinics with 30-50 daily consultations, scaling proportionally with patient volume.</p>
-                    <p><strong>Comparative economics (50-patient clinic):</strong></p>
-                    <ul>
-                        <li>Existing EMR solutions: ₹3,500-5,000/month recurring</li>
-                        <li>Lubera total cost: ~₹1,200/month</li>
-                    </ul>
-                    <p style="margin-top: 16px; color: #7f8c8d; font-size: 14px;">Time efficiency gain: 2 minutes per consultation × 50 patients = 100 minutes daily operational savings.</p>
+                    <h3>Hardware-as-Service</h3>
+                    <p>Clinics purchase Lubera Workstation (Compute Box + Monitor + Peripherals) at a one-time cost comparable to two stethoscopes. Covers proprietary operating system, apps, cables, cooling, first-year warranty.</p>
+                    <h3 style="margin-top: 32px;">Usage-Based Subscription</h3>
+                    <p><strong>Lubera Integrated clinic use case (50 visits/day):</strong> ~₹1,200/month total</p>
+	                    <p style="margin-top: 16px; color: #7f8c8d; font-size: 14px;"><strong>ROI:</strong> A single misdiagnosis from incomplete history costs a lot for the patient (like lost lab records / health records). 
+	                    Time saved (2 min × 50 patients = 100 min/day) equals 80+ hours/month the doctor reclaims.</p>
                 </div>
                 <div class="text-block">
-                    <h3>Addressable Market Analysis</h3>
+                    <h3>Market Opportunity</h3>
                     <ul>
-                        <li><strong>Total addressable market:</strong> ~600,000 independent clinics nationally</li>
-                        <li><strong>Serviceable obtainable market:</strong> ~50,000 high-volume clinics (40+ daily patients) in Tier-2 urban centers</li>
-                        <li><strong>Initial target segment:</strong> 15,000 clinics in metropolitan periphery and state capitals with established ABDM awareness</li>
+                        <li><strong>Total Addressable Market:</strong> ~600,000 independent clinics across India</li>
+                        <li><strong>Serviceable Obtainable Market:</strong> ~50,000 high-volume clinics in Tier-2/3 cities (Udaipur, Meerut, Salem, Pune, Lucknow, Indore, Nagpur, Visakhapatnam) seeing 40+ patients daily</li>
+                        <li><strong>Immediate Target:</strong> 150 clinics in Hyderabad metro periphery & Tier-2 hubs with highest ABDM awareness</li>
                     </ul>
-                    <h3 style="margin-top: 32px;">Regulatory Drivers</h3>
-                    <p>ABDM integration requirements are progressively mandated for government health scheme participation, with insurance providers implementing digital record requirements for cashless claim processing. State health departments in Maharashtra, Karnataka, and Telangana have established digitization timelines for empaneled primary care facilities, creating compliance-driven adoption pressure in target markets.</p>
+                    <h3 style="margin-top: 32px;">The Catalyst</h3>
+                    <p>ABDM is quickly becoming the default standard, not a nice-to-have. Government health schemes are increasingly tying empanelment and incentives to ABDM-linked, digital workflows, and insurers are moving toward fully digital records for smoother cashless claims. In many urban and high-awareness settings, patients are starting to value ABHA-linked, portable prescriptions and histories, creating a clear “adapt or fall behind” moment for clinics. Lubera positions itself as the most accessible way for resource-constrained clinics to cross this digital chasm and plug into the national health grid.</p>
                 </div>
             </div>
         </section>
 
         <!-- Traction & Patents -->
         <section class="section">
-            <h2 class="section-title">Development Status & Intellectual Property</h2>
+            <h2 class="section-title">Current Traction & Patent Protection</h2>
 
-            <h3 style="margin-bottom: 20px; font-size: 18px; color: #2c3e50;">Technical Validation Completed</h3>
+            <h3 style="margin-bottom: 20px; font-size: 18px; color: #2c3e50;">Product Maturity</h3>
             <div style="background: #f8fafb; padding: 24px; border-radius: 6px; margin-bottom: 40px;">
                 <ul style="margin-left: 20px; color: #555; font-size: 14px; line-height: 1.8;">
-                    <li>Functional EMR prototype with complete clinical workflows validated December 2024</li>
-                    <li>ABDM M1 integration architecture designed and submitted for sandbox testing</li>
-                    <li>Performance validation completed under simulated clinical load (60 patients/day, 8-hour sessions)</li>
-                    <li>Environmental stress testing conducted across temperature range (15°C-45°C) and network conditions (2G-4G)</li>
-                    <li>Security architecture designed for Digital Personal Data Protection Act and ABDM compliance requirements</li>
+                    <li>✓ POC complete with full clinical workflows validated</li>
+                    <li>✓ ABDM integration architecture finalized; sandbox application submitted (Dec 2024)</li>
+                    <li>✓ Successfully stress-tested in simulated high-volume environments (60+ patients/day)</li>
+                    <li>✓ Terminal reliability confirmed across temperature ranges (15°C–45°C) and connectivity (2G to 4G)</li>
+                    <li>✓ Architecture designed for HISAR & NPDPA compliance from day one</li>
                 </ul>
             </div>
 
-            <h3 style="margin-bottom: 20px; font-size: 18px; color: #2c3e50;">Patent Applications Filed</h3>
-            <p style="color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">Patent applications submitted covering architectural innovations in low-cost medical computing, specifically addressing:</p>
+            <h3 style="margin-bottom: 20px; font-size: 18px; color: #2c3e50;">Patent-Protected Position</h3>
+            <p style="color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 20px;">We have filed patents covering our unique architecture combining embedded optimization, medical-grade security on low-cost hardware, and adaptive networking for intermittent connectivity. No comparable solutions exist that simultaneously achieve:</p>
             <ul style="margin-left: 20px; color: #555; font-size: 14px; line-height: 1.8; margin-bottom: 30px;">
-                <li>Medical-grade security implementation on resource-constrained ARM architecture</li>
-                <li>ABDM-compliant EMR operation on sub-₹10,000 hardware configurations</li>
-                <li>Adaptive network protocols for clinical workflows on 2G/3G infrastructure</li>
-                <li>Zero-configuration deployment systems for non-technical medical staff</li>
+                <li>Medical computing hardware at sub-$100 price point</li>
+                <li>ABDM compliance on resource-constrained devices</li>
+                <li>Reliable 2G/3G operation for real-time clinical workflows</li>
+                <li>Zero-maintenance deployment for non-technical users</li>
             </ul>
 
             <h3 style="margin-bottom: 20px; font-size: 18px; color: #2c3e50;">Manufacturing Readiness</h3>
-            <p style="color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 16px;">Hardware design finalized for production scaling with established supply chain:</p>
+            <p style="color: #555; font-size: 15px; line-height: 1.8; margin-bottom: 16px;">Hardware for Lubera Terminal is production-grade and ready for immediate scale:</p>
             <ul style="margin-left: 20px; color: #555; font-size: 14px; line-height: 1.8;">
-                <li><strong>Component sourcing:</strong> Primary suppliers confirmed with volume pricing agreements</li>
-                <li><strong>Quality assurance:</strong> 72-hour burn-in testing protocol and multi-stage quality checkpoints defined</li>
-                <li><strong>Assembly partners:</strong> Electronics manufacturing service providers identified in Hyderabad and Chennai with 10,000+ unit monthly capacity</li>
-                <li><strong>Distribution:</strong> Logistics infrastructure planned for delivery to 50+ Tier-2 cities within 48-hour fulfillment window</li>
+                <li><strong>Supply chain:</strong> Key component suppliers locked in with volume commitments</li>
+                <li><strong>Quality assurance:</strong> 72-hour burn-in testing and multi-point inspection per unit</li>
+                <li><strong>Manufacturing partners:</strong> EMS providers in Hyderabad and Chennai capable of 10,000+ units/month</li>
+                <li><strong>Logistics:</strong> Distribution network mapped for 50+ Tier-2 cities with &lt;48-hour delivery</li>
             </ul>
 
         </section>
 
         <!-- The Ask -->
         <section class="section">
-            <h2 class="section-title">Partnership Opportunities</h2>
+            <h2 class="section-title">The Ask & Next Steps</h2>
 
-            <p style="text-align: center; color: #555; font-size: 15px; line-height: 1.8; max-width: 800px; margin: 0 auto 40px;">Development roadmap targets pilot deployment in Q3 2026 across 15 independent clinics in 3 Tier-2 cities, with primary objectives of ABDM certification completion (M1/M2/M3 milestones) and field performance validation under operational conditions.</p>
+            <p style="text-align: center; color: #555; font-size: 15px; line-height: 1.8; max-width: 800px; margin: 0 auto 40px;">We're seeking strategic partners to accelerate pilot deployment and scale manufacturing infrastructure. Our 2026 roadmap targets 15 clinic pilots across Hyderabad, and 3 Tier-2 cities, leading to full ABDM certification and field validation.</p>
 
             <div class="highlight-box">
-                <strong>Strategic objective:</strong> Enable ABDM integration for 100,000 independent primary care clinics by 2027, establishing portable health record infrastructure for underserved patient populations in Tier-2 and Tier-3 healthcare markets.
+                <strong>Vision (2027):</strong> Plug 100,000 clinics into India's national digital health grid, unlocking portable health records and better outcomes for millions of patients across Tier-2 and Tier-3 primary care settings.
             </div>
         </section>
 
         <!-- CTA -->
         <section class="final-cta" id="contact">
-            <h2>Pilot Deployment Partnerships</h2>
-            <p>Lubera is engaging partners for pilot program participation, regulatory pathway collaboration, and field validation studies. Healthcare organizations operating primary care networks in India are invited to discuss integration opportunities.</p>
+            <h2>Join the ABDM Ecosystem</h2>
+            <p>Lubera is actively recruiting partners for pilot deployments, regulatory pathway testing, and field validation. If your organization operates clinics or primary care networks in India, we'd like to discuss integration possibilities.</p>
             <div class="cta-form">
                 <input type="email" placeholder="your@email.com" id="email1">
-                <button onclick="handleSubmit('email1')">Contact Us</button>
+                <button onclick="handleSubmit('email1')">Get in Touch</button>
             </div>
         </section>
     </div>
@@ -669,152 +668,152 @@
     <!-- TAB 2: PROOF OF CONCEPT -->
     <div id="poc" class="tab-content">
         <section class="section" style="padding-top: 70px;">
-            <h2 class="section-title">Technical Validation & Performance Testing</h2>
+            <h2 class="section-title">Proof of Concept & Technical Validation</h2>
 
             <div class="highlight-box">
-                <strong>Validation status (December 2024):</strong> Functional EMR prototype demonstrates complete clinical workflow implementation including patient registration, consultation documentation, prescription generation, and inventory management. System architecture validated for offline-first operation with cloud synchronization and stress-tested under simulated clinic conditions.
+                <strong>Status (December 2025):</strong> Lubera POC demonstrates a complete, production-grade EMR with local-first architecture. The system includes full clinical workflows (patient registration, consultation, prescriptions, inventory), offline-first sync, stress testing results, and architecture design ready for ABDM M1 integration.
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Implemented Core Functionality</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">EMR Functionality (Complete)</h3>
 
             <div class="features-grid">
                 <div class="feature-card">
-                    <h4>Patient Administration</h4>
-                    <p>Registration workflows with demographic capture, multi-parameter search (ID, name, phone), optional biometric authentication, and longitudinal visit history management.</p>
+                    <h4>Patient Management</h4>
+                    <p>Patient registration, demographic capture. Search by ID, name, or phone. Facial recognition module (optional hardware). Complete patient history with visit logs.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Clinical Documentation</h4>
-                    <p>Consultation note capture, ICD-10 diagnosis coding, medication prescribing from formulary database, automated drug interaction detection, and dosage validation.</p>
+                    <h4>Clinical Workflows</h4>
+                    <p>Consultation notes. Diagnosis entry (ICD-10). Medication prescription (formulary-mapped). Auto-flagging for drug interactions and dosage validation.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Data Management</h4>
-                    <p>Longitudinal patient records, prescription tracking, appointment scheduling system, offline data persistence with synchronization queue, and zero-loss recovery from power interruption.</p>
+                    <h4>Record Management</h4>
+                    <p>Visit history. Prescription tracking. Appointment scheduling. Offline sync when connectivity restores. Zero data loss on power interruption.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Practice Operations</h4>
-                    <p>Role-based access control (physician, administrative staff), medication inventory tracking, GST-compliant billing, and operational analytics (patient volume, revenue trends, diagnosis patterns).</p>
+                    <h4>Administration</h4>
+                    <p>Staff role management (doctor, receptionist, admin). Clinic inventory tracking. GST-compliant invoicing. Analytics (patient volumes, revenue trends, diagnoses).</p>
                 </div>
                 <div class="feature-card">
-                    <h4>Security & Compliance</h4>
-                    <p>Comprehensive audit logging of clinical actions, AES-256 encrypted patient records, Digital Personal Data Protection Act compliant consent management, and zero plaintext storage of identifiable health information.</p>
+                    <h4>Security & Audit</h4>
+                    <p>Complete audit logging of all clinical actions. Encrypted patient records (AES-256). NPDPA-compliant consent capture. Zero plaintext storage of sensitive identifiers.</p>
                 </div>
                 <div class="feature-card">
-                    <h4>ABDM Integration Layer</h4>
-                    <p>Aadhaar and mobile OTP authentication workflows, ABHA identifier creation and verification, V2 API compliance with RSA encryption, token refresh management. <em>Status: M1 sandbox testing phase.</em></p>
+                    <h4>ABDM Integration (M1-Ready)</h4>
+                    <p>Aadhaar OTP validation. Mobile OTP verification. ABHA creation. Health ID verification. Compliant with V2 API specs (RSA encryption). Token refresh & session management.</p>
                 </div>
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Performance Validation Results</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Stress Test Results</h3>
 
             <div style="overflow-x: auto; margin: 40px 0;">
                 <table style="width: 100%; border-collapse: collapse; background: #ffffff; border: 1px solid #ecf0f1; border-radius: 6px;">
                     <thead>
                         <tr style="background: #f8fafb;">
-                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Performance Metric</th>
-                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Measured Value</th>
-                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Test Parameters</th>
+                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Metric</th>
+                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Result</th>
+                            <th style="padding: 16px; text-align: left; font-size: 14px; font-weight: 600; color: #2c3e50; border-bottom: 1px solid #ecf0f1;">Test Conditions</th>
                         </tr>
                     </thead>
                     <tbody>
                         <tr style="border-bottom: 1px solid #ecf0f1;">
-                            <td style="padding: 16px; font-size: 14px; color: #555;">CPU Utilization (Peak)</td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>5-7%</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">60 patient consultations/day with document imaging enabled</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">CPU Usage (Peak)</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>5–7%</strong></td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">60 patients/day, imaging enabled</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #ecf0f1;">
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Memory Consumption</td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>18-22%</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">50,000 patient record database loaded in active memory</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Memory Usage</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>18–22%</strong></td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">50,000 patient records loaded</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #ecf0f1;">
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Network Bandwidth (Typical)</td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>3-4 kbps</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Patient registration with cloud synchronization</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Bandwidth (Typical)</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>3–4 kbps</strong></td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Patient registration + sync</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #ecf0f1;">
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Battery Operation Duration</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Battery Life</td>
                             <td style="padding: 16px; font-size: 14px; color: #555;"><strong>10+ hours</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Standard 10,000 mAh power bank, continuous operation</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Standard 10,000 mAh powerbank, peak usage</td>
                         </tr>
                         <tr style="border-bottom: 1px solid #ecf0f1;">
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Offline Synchronization</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Offline Data Sync</td>
                             <td style="padding: 16px; font-size: 14px; color: #555;"><strong>100% completion</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">50 patient records queued during connectivity loss, zero data loss on sync</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">50 patient records queued; zero loss</td>
                         </tr>
                         <tr>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Operating Temperature Range</td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>15°C-45°C</strong></td>
-                            <td style="padding: 16px; font-size: 14px; color: #555;">Validated in uncontrolled ambient conditions with dust exposure</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Temperature Range</td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;"><strong>15°C–45°C</strong></td>
+                            <td style="padding: 16px; font-size: 14px; color: #555;">Field tested in dusty, high-temp environments</td>
                         </tr>
                     </tbody>
                 </table>
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Prototype Interface Documentation</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">POC Screenshots & Workflows</h3>
 
-            <p style="color: #7f8c8d; font-size: 14px; margin-bottom: 30px; text-align: center;">Representative screenshots from functional prototype demonstrating patient management, clinical workflows, and prescription generation:</p>
+            <p style="color: #7f8c8d; font-size: 14px; margin-bottom: 30px; text-align: center;">Below are real POC screenshots demonstrating patient management, consultation workflows, and prescription generation:</p>
 
             <div class="image-container" style="margin-bottom: 30px;">
-                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760601380251.png?raw=true" alt="Patient management dashboard interface">
+                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760601380251.png?raw=true" alt="POC patient management interface">
             </div>
 
             <div class="image-container" style="margin-bottom: 30px;">
-                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602431780.png?raw=true" alt="Clinical consultation workflow interface">
+                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602431780.png?raw=true" alt="POC consultation workflow">
             </div>
 
             <div class="image-container" style="margin-bottom: 30px;">
-                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602441107.png?raw=true" alt="Prescription generation interface">
+                <img src="https://github.com/NishantIyer2609/esgsrg/blob/main/1760602441107.png?raw=true" alt="POC prescription generation">
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">System Architecture & ABDM Integration Design</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Architecture & ABDM M1 Readiness</h3>
 
             <div class="highlight-box">
-                <strong>Local-first architecture:</strong> Embedded Linux operating system with compiled EMR application. All patient records maintained in local encrypted storage with cloud backup synchronization. System operates independently of network connectivity; ABDM integration implemented as optional connectivity layer.
+                <strong>Local Terminal</strong> Embedded Custom OS with hardened medical EMR application. Lifespan ~ 4 years, All patient records stored on the serverside with encrypted backup sync.
             </div>
 
             <div class="highlight-box">
-                <strong>Modular compliance layer:</strong> ABDM M1/M2/M3 integration implemented as microservice architecture with clear separation between proprietary EMR engine and national health infrastructure connectivity. Compliance layer designed for independent security assessment (VAPT/WASA) without exposing core EMR intellectual property.
+                <strong>ABDM Integration Layer:</strong> Modular microservice architecture for M1/M2/M3 API orchestration. Clear separation between proprietary local rendering engine (IP-protected) and ABDM compliance layer (audit-ready). Scoped for VAPT/WASA assessment of integration boundary only.
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Progressive Integration Timeline</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Roadmap: M1 → M2 → M3</h3>
 
             <div class="milestone-grid">
                 <div class="milestone">
-                    <h3>M1: ABHA Registry Services</h3>
-                    <p><strong>Current status:</strong> Architecture finalized, sandbox environment configured. Production credential application submitted December 2024. Implementation includes Aadhaar OTP authentication, mobile verification, ABHA creation workflows, and profile retrieval. Functional testing and VAPT/WASA assessment planned post-sandbox approval.</p>
+                    <h3>M1: ABHA Registry</h3>
+                    <p><strong>Timeline:</strong> Sandbox testing now; production keys target Q1 2026. Implement Aadhaar OTP, mobile OTP verification, ABHA creation, profile retrieval. Full FT + VAPT/WASA certification path.</p>
                 </div>
                 <div class="milestone">
-                    <h3>M2: Health Information Provider</h3>
-                    <p><strong>Planned timeline:</strong> 8-10 weeks post-M1 production certification. Scope includes care context registration, patient record discovery services, FHIR-compliant document generation, and ABDM Gateway integration for data exchange.</p>
+                    <h3>M2: HIP Integration</h3>
+                    <p><strong>Timeline:</strong> 8–10 weeks post-M1 production. Implement care context registration, health record discovery, FHIR bundle generation. Integrate with ABDM Gateway for patient discovery.</p>
                 </div>
                 <div class="milestone">
-                    <h3>M3: Health Information User</h3>
-                    <p><strong>Planned timeline:</strong> 10-12 weeks post-M2 production certification. Scope includes consent request workflows, FHIR bundle decryption and processing, longitudinal record aggregation from multiple HIPs, and multi-source data integration.</p>
+                    <h3>M3: HIU Integration</h3>
+                    <p><strong>Timeline:</strong> 10–12 weeks post-M2. Implement consent request workflows, FHIR bundle decryption, longitudinal record aggregation. Test with multiple HIP data sources.</p>
                 </div>
             </div>
 
-            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Pilot Deployment Strategy</h3>
+            <h3 style="margin: 50px 0 20px; font-size: 20px; color: #2c3e50;">Field Deployment Plan</h3>
 
             <div style="background: #f8fafb; padding: 24px; border-radius: 6px; margin-bottom: 40px; border-left: 4px solid #2980b9;">
-                <p style="color: #555; font-size: 14px; line-height: 1.8; margin-bottom: 0;"><strong>Q3 2026 Field Validation:</strong> Planned deployment across 15 independent clinics in 3 Tier-2 cities to validate ABDM M1/M2/M3 integration under operational conditions. Primary objectives include production certification completion, real-world performance data collection, clinical workflow optimization based on user feedback, and operational playbook development for commercial scaling.</p>
+                <p style="color: #555; font-size: 14px; line-height: 1.8; margin-bottom: 0;"><strong>Q3 2026 Pilot Launch:</strong> Deploy in 15 carefully selected clinics across 3 Tier-2 cities. Achieve full ABDM certification (M1, M2, M3). Gather real-world performance data, user feedback, and operational metrics for scale. This pilot will inform production deployment strategy and clinic onboarding playbooks.</p>
             </div>
         </section>
 
         <!-- CTA -->
         <section class="final-cta">
-            <h2>Regulatory Certification & Field Testing</h2>
-            <p>Lubera is preparing for National Health Authority functional testing and VAPT/WASA security assessment. Organizations involved in health technology testing, clinic network operations, or digital health infrastructure development are invited to discuss collaboration opportunities.</p>
+            <h2>Ready for Sandbox & Field Validation</h2>
+            <p>We are preparing for Functional Testing (FT) and VAPT/WASA security audits. If you represent a testing agency, clinic network, or healthcare technology organization, we'd like to discuss deployment partnerships and regulatory pathway collaboration.</p>
             <div class="cta-form">
                 <input type="email" placeholder="your@email.com" id="email2">
-                <button onclick="handleSubmit('email2')">Initiate Discussion</button>
+                <button onclick="handleSubmit('email2')">Start Conversation</button>
             </div>
         </section>
     </div>
 
     <!-- Footer -->
     <footer>
-        <p>&copy; 2024 Lubera Health Technologies. ABDM-integrated EMR platform for independent primary care clinics.</p>
-        <p style="margin-top: 10px;"><a href="#">Privacy Policy</a> | <a href="#">Terms of Service</a> | <a href="#">Contact</a></p>
+        <p>&copy; 2025 Lubera Health. EMR platform for ABDM-integrated primary care in Tier-2/3 clinics.</p>
+        <p style="margin-top: 10px;"><a href="#">Privacy</a> | <a href="#">Terms</a> | <a href="#">Contact</a></p>
     </footer>
 
     <script>
@@ -833,10 +832,10 @@
         function handleSubmit(inputId) {
             const email = document.getElementById(inputId).value;
             if (email) {
-                alert(`Thank you for your interest. A member of our team will contact ${email} regarding partnership opportunities and technical collaboration.`);
+                alert(`Thank you for your interest (${email}). We will be in touch soon about partnerships and pilot opportunities.`);
                 document.getElementById(inputId).value = '';
             } else {
-                alert('Please provide a valid email address.');
+                alert('Please enter your email address.');
             }
         }
     </script>
